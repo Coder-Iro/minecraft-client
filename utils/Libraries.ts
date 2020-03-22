@@ -103,7 +103,9 @@ export class LibraryManager {
         progress.call(1);
 
         this.mainClass = data.mainClass;
-        this.arguments = data.arguments;
+        // this.arguments = data.arguments; / Wrong Code
+        this.arguments.game = data.minecraftArguments.split(' ')
+        // I don't know how I assign this.arguments.jvm
         this.versionType = data.type;
         this.assetIndex = data.assets;
     }
